@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #263238;
-    --color-primary-lighter: #4f5b62;
-    --color-primary-darker: #000a12;
-    --color-secondary: #ff8a80;
+    --color-primary: rgb(38, 50, 56);
+    --color-primary-lighter: rgb(79, 91, 98);
+    --color-primary-darker: rgb(0, 10, 18);
+    --color-secondary: rgb(255, 138, 128);
     --color-secondary-lighter: #ffbcaf;
-    --color-secondary-darker: #c85a54;
+    --color-secondary-darker: rgb(200, 90, 84);
     --color-text: #ffffff;
 }
 * {
@@ -12,6 +12,32 @@
     font: sans-serif;
     color: white;
     background-color: var(--color-primary-darker); 
+}
+h1::-moz-selection {
+    background: var(--color-secondary-darker);
+}
+h1::selection {
+    background: var(--color-secondary-darker);
+}
+h2::-moz-selection {
+    background: var(--color-secondary-darker);
+}
+h2::selection {
+    background: var(--color-secondary-darker);
+}
+p::-moz-selection {
+    background: white;
+    color: black;
+}
+p::selection {
+    background: white;
+    color: black;
+}
+.nav-link::-moz-selection {
+    background: var(--color-secondary-darker);
+}
+.nav-link::selection {
+    background: var(--color-secondary-darker);
 }
 body {
     margin: 0; 
@@ -35,7 +61,7 @@ body {
     padding: 10px;
 }
 .nav-link:hover {
-    color: var(--color-secondary);
+    color: var(--color-secondary-lighter);
 }
 main {
     margin-top: 50px; 
@@ -46,9 +72,8 @@ h1, h2, p, a {
 h1 {
     font-size: 70px;
 }
-p {
-    font-size: 1.5em;
-    font-weight: bold;
+h2 {
+    font-size: 50px;
 }
 #welcome-section {
     display: flex;
@@ -59,8 +84,12 @@ p {
     height: 100vh;
 }
 #welcome-section > p {
+    border-style: solid;
+    border-color: var(--color-secondary-darker);
+    background-color: var(--color-secondary-darker);
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 500;
+    color: var(--color-primary-darker);
 }
 #projects-section {
     display: flex;
@@ -77,6 +106,63 @@ p {
 #profile-link:hover {
     text-decoration: underline;
 }
+.container {
+    background: linear-gradient(120deg, var(--color-primary), var(--color-primary-lighter));
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    justify-items: center;
+    grid-template-areas:
+        "one two three four"
+        "five six seven eight"
+        "nine nine nine nine";
+    border-radius: 1%;
+    box-shadow: 10px 10px 5px rgba(200, 90, 84, 0.4);
+}
+#logo1 {
+    grid-area: one;
+}
+#logo2 {
+    grid-area: two;
+}
+#logo3 {
+    grid-area: three;
+}
+#logo4 {
+    grid-area: four;
+}
+#logo5 {
+    grid-area: five;
+}
+#logo6 {
+    grid-area: six;
+}
+#logo7 {
+    grid-area: seven;
+}
+#logo8 {
+    grid-area: eight;
+}
+#logo9 {
+    grid-area: nine;
+    justify-self: left;
+    padding-left: 120px;
+}
+#logo10 {
+    grid-area: nine;
+    justify-self: center;
+}
+#logo11 {
+    grid-area: nine;
+    justify-self: right;
+    padding-right: 105px;
+}
+.logo {
+    height: 100px;
+    width: auto;
+    padding: 10px;
+    background-color: transparent;
+}
 #contact-section {
     width: 100%;
     height: 100vh;
@@ -88,14 +174,21 @@ p {
 .fa {
     padding: 20px;
     font-size: 30px;
-    width: 50px;
+    width: 70px;
     text-align: center;
     text-decoration: none;
+    border-radius: 50%;
 }
 .fa:hover {
     opacity: 0.7;
+    background-color: var(--color-secondary-darker);
 }
 #logos {
     display: inline-block;
     align-content: space-between;
+}
+#contact-section > p {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--color-secondary);
 }
