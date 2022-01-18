@@ -42,8 +42,7 @@ p::selection {
 body {
     margin: 0; 
 }
-@media (min-width: 1vw) {
-    #navbar {
+#navbar {
         position: fixed;
         top: 0;
         width: 100%;
@@ -54,7 +53,7 @@ body {
         flex-direction: row;
         justify-content: center; 
         align-items: center;
-} }
+}
 .nav-link {
     text-decoration: none;
     color: white;
@@ -67,7 +66,7 @@ body {
 main {
     margin-top: 50px; 
 }
-h1, h2, p, a {
+h1, h2, p, a, ul{
     font-family: 'Roboto Slab', serif;
 }
 h1 {
@@ -83,6 +82,8 @@ h2 {
     align-items: center;
     width: 100%;
     height: 100vh;
+    scroll-margin-top: 5rem;
+    scroll-snap-margin-top: 5rem;
 }
 #welcome-section > p {
     border-style: solid;
@@ -92,6 +93,30 @@ h2 {
     font-weight: 500;
     color: var(--color-primary-darker);
 }
+#about-section {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-margin-top: 5rem;
+    scroll-snap-margin-top: 5rem;
+}
+#about-section > ul {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#about-section > ul > li {
+    padding: 5px;
+}
+#sub-ul {
+    font-size: 17px;
+    text-align: left;
+    padding-top: 5px;
+}
+#sub-ul > li {
+    padding: 5px;
+}
 #projects {
     display: flex;
     flex-direction: column;
@@ -99,6 +124,8 @@ h2 {
     align-items: center;
     width: 100%;
     height: 100vh;
+    scroll-margin-top: 5rem;
+    scroll-snap-margin-top: 5rem;
 }
 #profile-link {
     text-decoration: none;
