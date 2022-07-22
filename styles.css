@@ -108,12 +108,12 @@ h2 {
 #about-section > ul > li {
     padding: 5px;
 }
-#sub-ul {
+.sub-ul {
     font-size: 17px;
     text-align: left;
     padding-top: 5px;
 }
-#sub-ul > li {
+.sub-ul > li {
     padding: 5px;
 }
 #projects {
@@ -159,7 +159,7 @@ h2 {
     grid-template-areas:
         "one two three four"
         "five six seven eight"
-        "nine nine nine nine";
+        "nine ten eleven twelve";
     border-radius: 1%;
     box-shadow: 10px 10px 5px rgba(200, 90, 84, 0.4);
 }
@@ -189,17 +189,15 @@ h2 {
 }
 #logo9 {
     grid-area: nine;
-    justify-self: left;
-    padding-left: 120px;
 }
 #logo10 {
-    grid-area: nine;
-    justify-self: center;
+    grid-area: ten;
 }
 #logo11 {
-    grid-area: nine;
-    justify-self: right;
-    padding-right: 105px;
+    grid-area: eleven;
+}
+#logo12 {
+    grid-area: twelve;
 }
 .logo {
     height: 100px;
