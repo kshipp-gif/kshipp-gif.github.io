@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="./contact-form.js"></script>
     <title>Karson Shipp Portfolio</title>
 </head>
 <body>
@@ -101,7 +103,15 @@
                 <a href="https://www.linkedin.com/in/karson-shipp-072552115" target="_blank" class="fa fa-linkedin"></a>
             </div>
             <h2>or send me an email</h2>
-            <p>karsonshipp@protonmail.com</p>
+            <div id="email-form">
+                <form action="https://formspree.io/f/mvolewrn" method="POST">
+                    <div class="status"></div>
+                    <input type="text" class="email" name="email" placeholder="your email address" required>
+                    <input type="text" class="subject" name="subject" placeholder="subject" required>
+                    <textarea class="message" name="message" rows="4" placeholder="your message"></textarea>
+                    <button type="submit" class="submit">send</button>
+                </form>
+            </div>
         </section>
         <!-- END CONTACT SECTION -->
     </main>
