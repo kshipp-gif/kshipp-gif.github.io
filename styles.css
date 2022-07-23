@@ -66,7 +66,7 @@ body {
 main {
     margin-top: 50px; 
 }
-h1, h2, p, a, ul{
+h1, h2, p, a, ul, input, button, textarea {
     font-family: 'Roboto Slab', serif;
 }
 h1 {
@@ -241,4 +241,36 @@ h2 {
     font-size: 20px;
     font-weight: 300;
     color: var(--color-secondary);
+}
+form {
+    background: linear-gradient(120deg, var(--color-primary), var(--color-primary-lighter));
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 1%;
+    box-shadow: 10px 10px 5px rgba(200, 90, 84, 0.4);
+}
+form > input, form > textarea {
+    border: 0;
+    margin: 5px 0;
+    padding: 10px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 1%;
+}
+form > button {
+    background: var(--color-secondary-darker);
+    font-size: 14px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    padding: 5px;
+    border-radius: 1%;
+    width: 100px;
+    margin: 10px auto 0;
+}
+form > button:hover {
+    background-color: var(--color-secondary-lighter);
 }
